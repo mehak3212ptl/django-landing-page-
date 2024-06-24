@@ -17,9 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import index
+from app import views as v1
+from app1 import views as v2
+from app2 import views as v3
 
 urlpatterns = [
     path('admin/', admin.site.urls),
    # path("",index,name="views")
-    path("home/",index,name="index")
+    path("home/",index,name="index"),
+    path("home/",v1.index,name="index1"),
+    path("home/",v2.index,name="index2"),
+    path("home/",v3.index,name="index3")
 ]
