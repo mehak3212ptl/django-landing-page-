@@ -23,9 +23,10 @@ from app2 import views as v3
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   # path("",index,name="views")
-    path("home/",index,name="index"),
-    path("home/",v1.index,name="index1"),
-    path("home/",v2.index,name="index2"),
-    path("home/",v3.index,name="index3")
+    path("home1/",v1.index,name="index1"),
+    path("11/",v1.home,name="home"),
+    path("home2/",v2.index,name="index2"),
+    path("22/",v2.about,name="about"),
+    path("home3/",v3.index,name="index3"),
+    path("33/",v3.login,name="login")
 ]
